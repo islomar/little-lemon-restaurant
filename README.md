@@ -16,12 +16,59 @@
 - Expo Go quickstart vs RN CLI quickstart
 - React Native with Expo
   - You need Node, an emulator and an IDE
+  - With Expo you can compile into iOS. But you can not run an emulator.
+  - `npx create-expo-app SampleProject`
+- https://guides.cocoapods.org/using/getting-started.html
+
 
 ## Introduction to React Native
-- TBD
+- https://snack.expo.dev/
+- Debugging React Native apps is simple since you are essentially debugging JavaScript code.  You can use the Chrome developer tools to debug the JavaScript code. In addition, you can use the React Developer tools to debug the React Component hierarchy.
+- The JavaScript code is bundled into a single file, which is then loaded by the native code. The native code is compiled into a binary that is then installed on the device.
+- **Over-the-Air Updates**
+  - The next feature, which is another big time-saver, is over-the-air updates. In traditional native apps, both iOS and Android, the release process can be tedious and getting approval from the app store can take several days. With React Native, you may be able to avoid this wait, depending on your changes. 
+  - **App Center’s Code Push** is a cloud service that enables React Native developers to deploy mobile app updates directly to the users’ devices. It acts as a central repository to which developers can publish updates, and those apps can query for updates. This means **small features or bug fixes can be made available to users immediately**, without redistribution through the respective app stores. 
+  - Features like **Over the Air (OTA)** updates make the React Native developer experience seamless.
+- **Expo**
+  - https://expo.dev/
+  - It adds a layer of abstraction on top of RN
+  - Open source
+  - It comes with several built-in APIs
+  - It comes with **OTA**
+  - **Limitations**
+    - Not optimized for custom modules: with Expo you won't have access to the native iOS or Android code
+    - Limited API support, it does not support all the iOS and Android APIs
+    - Not lean: it comes with several packages and libraries that you might not use.
+      - Large app sizes
+  - You can **eject your app from Expo** if eventually you find their limitations a real issue.
+    - You might have to refactor some code
+  - It is highly recommended.
+  - Avoid pain points, fastest way to develop in RN
+  - [Continuous Native Generation](https://docs.expo.dev/workflow/continuous-native-generation/) (CNG) is an abstract concept that defines the generation of native code from several inputs, typically the fusion of a code template and configuration. The result is a native project that can be compiled into a native app. It is a process used by Expo Prebuild to generate native projects for React Native apps
+  - Before a native app can be compiled, the native source code must be generated. Expo CLI provides a unique and powerful system called [**prebuild**](https://docs.expo.dev/workflow/prebuild/), which generates the native code for your project based on four factors.
+  - **Expo Config Plugins** are a way to customize the native code for your project during the prebuilding process.
+    - They provide a way to add custom native code and manage native dependencies for your project.
+    - https://docs.expo.dev/config-plugins/introduction/
+    - A config plugin can be used to automatically configure your native project for a module and reduce the complexity by avoiding interaction with the native project.
+  - [Expo Application Services](https://expo.dev/eas)
+    - Deeply integrated cloud services for Expo and RN apps
+    - EAS Build is a hosted service for building app binaries for your Expo and React Native projects.
+    - Very recommended
+    - Other options: Expo Prebuild (to generate the native code of our Expo apps) + Fastlane (to compile and submit to the stores)
 
 ## React Native Components
-- TBD
+- Types of components:
+  - **Core components**
+    - View, Text, Image, TextInput, ScrollView
+    - They translate into native iOS/Android components
+  - **Custom Components**: some components are reusable, like headers, footers, menu bars and images. 
+  - **Community components**
+    - React Navigation
+    - React Native Screens, Maps, Video, etc.
+    - [Community-contributed React Components](https://reactnative.directory/)
+  - **Your native components**
+    - Build custom iOS or Android components based on your application's unique needs
+    - Written in native code (e.g. Swift, Kotlin)
 
 ## Views, Text and Scrollable components
 - TBD
@@ -29,5 +76,9 @@
 ## Styling components
 - TBD
 
-## References
+## References and further readings
 - https://github.com/bluesky-social/social-app
+- [Moving Off React Native](https://www.youtube.com/watch?v=gntZth3mIbM)
+- https://medium.com/alan/our-journey-from-react-native-to-expo-for-mobile-app-development-at-alan-%EF%B8%8F-3b1569e8ab7c
+  - https://docs.expo.dev/develop/development-builds/introduction/#what-is-expo-dev-client
+    - By using development builds instead of Expo Go, you gain full control over the native runtime, so you can install any native libraries, modify any project configuration, or write your own native code.
