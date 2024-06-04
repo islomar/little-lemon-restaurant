@@ -84,6 +84,10 @@
     - `style`
     - `numberOfLines`
 - `flex: 1` means that the entire mobile screen will be taken by this view (e.f. for the parent view of the root component).
+- **`ScrollView`**
+  - All the parent views must have a height or `flex: 1`,
+  - `horizontal={true}`
+  - `indicatorStyle={'white'}`
 
 ## Styling components
 - TBD
