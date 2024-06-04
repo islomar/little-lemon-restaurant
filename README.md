@@ -1,5 +1,6 @@
 # Little Lemon Restaurant
 - Code from React Native course in Coursera (created by Meta)
+- Probably published on November 2022
 - 5 modules, 38 hours 
 - https://www.coursera.org/learn/react-native-course
 
@@ -55,6 +56,8 @@
     - EAS Build is a hosted service for building app binaries for your Expo and React Native projects.
     - Very recommended
     - Other options: Expo Prebuild (to generate the native code of our Expo apps) + Fastlane (to compile and submit to the stores)
+    - [Continuous Integration and Deployment for React Native Apps: Streamlining Development Workflow 🚀🔄](https://dev.to/medaimane/continuous-integration-and-deployment-for-react-native-apps-streamlining-development-workflow-4i04)
+
 
 ## React Native Components
 - Types of components:
@@ -71,10 +74,27 @@
     - Written in native code (e.g. Swift, Kotlin)
 
 ## Views, Text and Scrollable components
-- TBD
+- **View**: 
+  - basic building block of the user interface.
+  - it can be nested in other Views
+- **Text**
+  - basic core components to display text
+  - any text MUST be wrapped in a `Text` component
+  - properties
+    - `style`
+    - `numberOfLines`
+- `flex: 1` means that the entire mobile screen will be taken by this view (e.f. for the parent view of the root component).
 
 ## Styling components
 - TBD
+
+## Process
+- https://reactnative.dev/docs/libraries
+- React Native uses CocoaPods to manage iOS project dependencies and most React Native libraries follow this same convention.
+  - `npx pod-install` (from root folder, no need to go to `ios` folder; it's the same as `cd ios && pod install`)
+  - `yarn ios` (re-build the app binary to start using your new library)
+- React Native uses Gradle to manage Android project dependencies. After you install a library with native dependencies, you will need to re-build the app binary to use your new library:
+  - `yarn android`
 
 ## References and further readings
 - https://github.com/bluesky-social/social-app
