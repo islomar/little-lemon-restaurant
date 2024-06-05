@@ -4,7 +4,7 @@
 - 5 modules, 38 hours 
 - https://www.coursera.org/learn/react-native-course
 
-## Course Introduction
+## Module 1
 - Open-sourced in 2015, developed by Meta
 - RN can also be used to create Windows apps and TV apps
 - Hybrid apps: 
@@ -22,7 +22,7 @@
 - https://guides.cocoapods.org/using/getting-started.html
 
 
-## Introduction to React Native
+### Introduction to React Native
 - https://snack.expo.dev/
 - Debugging React Native apps is simple since you are essentially debugging JavaScript code.  You can use the Chrome developer tools to debug the JavaScript code. In addition, you can use the React Developer tools to debug the React Component hierarchy.
 - The JavaScript code is bundled into a single file, which is then loaded by the native code. The native code is compiled into a binary that is then installed on the device.
@@ -59,7 +59,7 @@
     - [Continuous Integration and Deployment for React Native Apps: Streamlining Development Workflow 🚀🔄](https://dev.to/medaimane/continuous-integration-and-deployment-for-react-native-apps-streamlining-development-workflow-4i04)
 
 
-## React Native Components
+### React Native Components
 - Types of components:
   - **Core components**
     - View, Text, Image, TextInput, ScrollView
@@ -73,7 +73,7 @@
     - Build custom iOS or Android components based on your application's unique needs
     - Written in native code (e.g. Swift, Kotlin)
 
-## Views, Text and Scrollable components
+### Views, Text and Scrollable components
 - **View**: 
   - basic building block of the user interface.
   - it can be nested in other Views
@@ -89,10 +89,11 @@
   - `horizontal={true}`
   - `indicatorStyle={'white'}`
 
-## Styling components
-- TBD
+### Styling components using StyleSheet
+- Separate the component code from the style code
+- `const styles = StyleSheet.create({ ... })`
 
-## Process
+### Process
 - https://reactnative.dev/docs/libraries
 - React Native uses CocoaPods to manage iOS project dependencies and most React Native libraries follow this same convention.
   - `npx pod-install` (from root folder, no need to go to `ios` folder; it's the same as `cd ios && pod install`)
@@ -100,9 +101,52 @@
 - React Native uses Gradle to manage Android project dependencies. After you install a library with native dependencies, you will need to re-build the app binary to use your new library:
   - `yarn android`
 
+
+## Module 2
+### Render large lists with FlatList
+- TBD
+
+### Render large lists with FlatList
+-TBD
+
+### Accept user input
+-TBD
+
+### Working with TextInput components
+-TBD
+
+
+## Module 3
+### TBD
+-TBD
+
+
+## Module 4
+### TBD
+-TBD
+
+
+## Module 5
+### TBD
+-TBD
+
+
 ## References and further readings
+### Module 1
 - https://github.com/bluesky-social/social-app
 - [Moving Off React Native](https://www.youtube.com/watch?v=gntZth3mIbM)
 - https://medium.com/alan/our-journey-from-react-native-to-expo-for-mobile-app-development-at-alan-%EF%B8%8F-3b1569e8ab7c
   - https://docs.expo.dev/develop/development-builds/introduction/#what-is-expo-dev-client
     - By using development builds instead of Expo Go, you gain full control over the native runtime, so you can install any native libraries, modify any project configuration, or write your own native code.
+
+### Module 2
+- TBD
+
+### Module 3
+- TBD
+
+### Module 4
+- TBD
+
+### Module 5
+- TBD
